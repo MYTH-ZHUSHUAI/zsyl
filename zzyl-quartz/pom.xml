@@ -17,16 +17,16 @@
 
     <dependencies>
 
-        <!-- 定时任务 -->
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-        </dependency>
-
         <!-- 通用工具-->
         <dependency>
             <groupId>com.zzyl</groupId>
             <artifactId>zzyl-common</artifactId>
+        </dependency>
+
+        <!-- 定时任务 -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
         </dependency>
 
     </dependencies>

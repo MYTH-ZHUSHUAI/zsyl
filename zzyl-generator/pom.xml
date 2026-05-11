@@ -17,16 +17,16 @@
 
     <dependencies>
 
-        <!-- velocity代码生成使用模板 -->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-engine-core</artifactId>
-        </dependency>
-
         <!-- 通用工具-->
         <dependency>
             <groupId>com.zzyl</groupId>
             <artifactId>zzyl-common</artifactId>
+        </dependency>
+
+        <!-- velocity代码生成使用模板 -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
         </dependency>
 
         <!-- 阿里数据库连接池 -->

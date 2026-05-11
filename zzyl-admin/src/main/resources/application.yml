@@ -7,7 +7,7 @@ ruoyi:
   # 版权年份
   copyrightYear: 2026
   # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
-  profile: D:/ruoyi/uploadPath
+  profile: /Users/zhushuai/Documents/github/zzyl/uploadPath
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数字计算 char 字符验证
@@ -98,14 +98,28 @@ token:
   # 令牌有效期（默认30分钟）
   expireTime: 300
 
-# MyBatis配置
-mybatis:
+## MyBatis配置
+#mybatis:
+#  # 搜索指定包别名
+#  typeAliasesPackage: com.zzyl.**.domain
+#  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+#  mapperLocations: classpath*:mapper/**/*Mapper.xml
+#  # 加载全局的配置文件
+#  configLocation: classpath:mybatis/mybatis-config.xml
+
+# MyBatisPlus配置
+mybatis-plus:
   # 搜索指定包别名
   typeAliasesPackage: com.zzyl.**.domain
   # 配置mapper的扫描，找到所有的mapper.xml映射文件
   mapperLocations: classpath*:mapper/**/*Mapper.xml
-  # 加载全局的配置文件
-  configLocation: classpath:mybatis/mybatis-config.xml
+  # 全局配置
+  global-config:
+    db-config:
+      id-type: assign_uuid   #id生成策略为雪花
+  configuration:
+    map-underscore-to-camel-case: true    #字段与属性，自动转换为驼峰命名
+
 
 # PageHelper分页插件
 pagehelper:
@@ -125,7 +139,18 @@ springdoc:
     - group: 'default'
       display-name: '测试模块'
       paths-to-match: '/**'
-      packages-to-scan: com.zzyl.web.controller.tool
+      packages-to-scan: com.zzyl.web.controller
+
+knife4j:
+  enable: true
+  production: false
+  basic:
+    enable: false
+    username: ruoyi
+    password: 123456
+  setting:
+    swagger-model-name: 实体类列表
+
 
 # 防盗链配置
 referer:
