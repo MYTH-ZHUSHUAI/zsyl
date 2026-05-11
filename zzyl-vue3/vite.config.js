@@ -52,9 +52,23 @@ export default defineConfig(({ mode, command }) => {
           changeOrigin: true,
           rewrite: (p) => p.replace(/^\/dev-api/, '')
         },
-         // springdoc proxy
+         // springdoc / knife4j 代理
          '^/v3/api-docs/(.*)': {
           target: baseUrl,
+          changeOrigin: true,
+        },
+        // knife4j 静态资源代理
+        '/webjars': {
+          target: baseUrl,
+          changeOrigin: true,
+        },
+        '/swagger-resources': {
+          target: baseUrl,
+          changeOrigin: true,
+        },
+        // knife4j JS 请求携带 /api 上下文路径，需要代理到后端根路径
+        '/api': {
+          target: 'http://localhost:8080',
           changeOrigin: true,
         }
       }

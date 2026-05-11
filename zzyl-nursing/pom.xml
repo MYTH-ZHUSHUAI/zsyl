@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.zzyl</groupId>
+        <artifactId>zzyl</artifactId>
+        <version>3.9.2</version>
+    </parent>
+
+    <artifactId>zzyl-nursing</artifactId>
+    <description>护理模块</description>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
+    <dependencies>
+
+        <!-- common模块-->
+        <dependency>
+            <groupId>com.zzyl</groupId>
+            <artifactId>zzyl-common</artifactId>
+        </dependency>
+
+        <!-- 核心模块-->
+        <dependency>
+            <groupId>com.zzyl</groupId>
+            <artifactId>zzyl-framework</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations-jakarta</artifactId>
+            <version>2.2.43</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+</project>
